@@ -1,4 +1,4 @@
-var db_mongMongoose = require('mongoose');
+var db_reqMongoose = require('mongoose');
 var db_shSchema = db_mongMongoose.Schema;
 
 var db_shUser = new db_shSchema({
@@ -11,5 +11,5 @@ var db_shUser = new db_shSchema({
     db_nZipCode:{type:Integer,required:true}
             
 });
-var db_modelUser = mongoose.model('dbPersonalInfo',db_shUser);
+var db_modelUser = db_reqMongoose.model('dbPersonalInfo',db_shUser);
 module.exports = db_modelUser;

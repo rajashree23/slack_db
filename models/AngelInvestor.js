@@ -1,5 +1,5 @@
-var db_mongMongoose = require('mongoose');
-var db_shSchema = db_mongMongoose.Schema;
+var db_reqMongoose = require('mongoose');
+var db_shSchema = db_reqMongoose.Schema;
 var db_shAngelInvestor = new db_shSchema({
 
     db_sRegionToInvest:
@@ -23,5 +23,5 @@ var db_shAngelInvestor = new db_shSchema({
 
 });
 
-var db_modelAngelInvestor = mongoose.model('dbAngelInvestor', db_shAngelInvestor);
+var db_modelAngelInvestor = db_reqMongoose.model('dbAngelInvestor', db_shAngelInvestor);
 Module.exports = db_modelAngelInvestor;
